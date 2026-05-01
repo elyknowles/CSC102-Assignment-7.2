@@ -1,0 +1,117 @@
+/* Ely Knowles, CSC102, Assignment 7.2, 29APR2026 */
+/* this controls the color of the page, font color and aligns everything to the center */
+body
+{
+    background-color: rgb(1, 132, 255);
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* this controls font of the h1 title line */
+h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* this formatts the check palindrome button */
+#submitBtn
+{
+    background-color: #2b2c69;
+    color: white; /*font color */
+    border: none; /* no border */
+    border-radius: 8px; /* rounded corners */
+    padding: 12px 24px; /* size */
+    font-size: 16px;
+    cursor: pointer; /* makes it a hand */
+    transition: 0.3s; /* smooth hover effect */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* this creates a small 5% hover effect when moused over */
+#submitBtn:hover
+{
+    background-color: #2b2c69;
+    transform: scale(1.05); /* slight grow */
+}
+
+/* this divides the content into flex items allowing for better formatting */
+#mainContainer
+{
+    display: flex;
+    align-items: flex-start; /*aligns flex items to the top of the page and stacks vertically*/
+    gap: 40px;
+}
+
+/* this formats all content in the rightContainer */
+#rightContainer
+{
+    display: flex;/*tells browser items are flex items*/
+    flex-direction: column;/*stacks items vertically in a column*/
+    align-items: center; /* centers image under form */
+}
+
+/* this formats the meme image and gives it a shadow*/
+#morph
+{
+    margin-top: 20px;/*20px gap between image and form result*/
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    opacity: .95;/*subtle effect for a better looking image*/
+    border-radius: 20px; /* rounded corners */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35); /* shadow */
+}
+
+/* this formats the border around the nav buttons */
+#buttonContainerLeft
+{
+    display: flex; /*allows button size to change*/
+    flex-direction: column; /*stacks buttons vertically*/
+    align-items: flex-start; /*stacks buttons on the left side of the page*/
+    justify-content: flex-start; /**/
+    flex-wrap: wrap; /*keepts the buttons from overflowing*/
+    gap: 10px; /*space around buttons to container*/
+    
+    /* this adds a "floating dock" styled border around the buttons */
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px); /*this adds a glass effect bluring what is behind the border*/
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 20px;
+    width: fit-content;
+    margin: 20px; /* spacing from edge */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* #buttonContainer button is a descendant selector applying formatting to all <button> inside buttonContainer  */
+#buttonContainerLeft button
+{
+    display: block;
+    width: 180px; /*this makes all buttons the same width regardless of text inside*/ 
+    background-color: grey; /*dictates button background color*/
+    color: whitesmoke; /*font color inside button*/
+    border: 2px solid black; /*adds solid black border 2 pixels wide */
+    border-radius: 10px; /*gives the button rounded corners*/
+    margin: 0;
+    padding: 10px 20px; /*space around border*/
+    transition: 0.3s; /* smooth hover effect */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);  /*size and color of shadow effect*/
+}
+
+/* this changes the background color of the bottons when user mouses over them */
+#buttonContainerLeft button:hover
+{
+    background-color: rgb(60, 97, 104);
+    transform: scale(1.05); /* slight 5% grow */
+}
+
+/* this formats the uat shield logo and keeps it in the bottom left hand corner of the window */
+#uatLogo
+{
+    position: fixed;/* locks it to the window */
+    bottom: 20px;/* distance from bottom */
+    left: 20px;/* distance from left */
+    width: 120px;/* adjust size */
+    height: auto;/* keeps height proportional */
+    opacity: 0.9;/* reduced opacity for a slightly more subtle look */
+}

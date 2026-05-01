@@ -1,0 +1,42 @@
+<!-- Ely Knowles, CSC102, Assignment 7.2, 29APR2026 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this links the css to this html -->
+    <link rel="stylesheet" href="meme.css">
+    <!-- script linkts the js to this html -->
+    <script src="meme.js"></script>
+    <!-- this is the tab title -->
+    <title>Index</title>
+</head>
+<!-- body is the page visible to the viewer -->
+<body>
+    <!-- h1 is the largest heading and contains the page title text -->
+    <h1>Move It Move It</h1>
+    <!-- these are the buttons that start and top the interval moves. div id allows me to call both the buttons at the same time in css and js-->
+     <div id="btnContainer">
+        <button onclick="startInterval()" id="startMove">Ask Chuck to Move</button>
+        <button onclick="stopInterval()" id="stopMove">Ask Chuck to Stop</button>
+    </div>
+    <!-- buttonContainerLeft holds all the nav buttons for ease of formatting -->
+    <div id="buttonContainerLeft">
+        <button id="home" onclick="homePage()">Home</button>
+        <button id="boards" onclick="boardsPage()">Boards</button>
+        <button id="game" onclick="gamePage()">Game</button>
+        <button id="pal" onclick="palPage()">Palindrome</button>
+        <button id="shop" onclick="shopPage()">Shopping List</button>
+        <button id="sound" onclick="soundPage()">Space Station</button>
+        <button id="table" onclick="tablePage()">Table</button>
+    </div>
+        <br>
+    <!-- this places the image that will be moving, assigns an id to be called in the css and js as well as its starting position in pixels -->
+    <img src="chucknorris.jpg" id="imgChuck" style="position: absolute" left: 150; top: 150; width: 200px;/>
+    <br>
+    <!-- this div assigns a the id of "msg" to a null value so that we can use js to dispaly information at that id -->
+    <div id="msg"></div>
+    <!-- this adds the UAT shield logo to my boards page -->
+    <img id="uatLogo"  src="../Home Page Images/UAT_shield.png">
+</body>
+</html>

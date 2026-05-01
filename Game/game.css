@@ -1,0 +1,160 @@
+/* Ely Knowles, CSC102 Assignment 7.2, 28APR2026*/
+/* The body tag changes the color or the webpage */
+body
+{
+    background-color: rgb(1, 132, 255);
+}
+
+/* this aligns everything in the header to center */
+header
+{
+    width: calc(100% - 150px); /* subtract sidebar width */
+    margin-left: 150px; /* push it over to align with game */
+    text-align: center;
+}
+
+/* This changes the color, and font of the heading */
+h1
+{
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* This changes the color, font, font size, and alignment of the footer */
+footer
+{
+    color: whitesmoke;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 10px;
+}
+
+/* This changes the color, font, and alignment of the game title */
+h2
+{
+    color: whitesmoke;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+/* this centers the game title image under the game title */
+#rps
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* this centers the "Play Rock Paper Scissors" button on the page and changes background color, border, and corners */
+#rpsBtn
+{
+    display: block;
+    margin: 0 auto;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#rpsBtn:hover /*this causes the play rps button to change size, shape, color, and adds a border when the user hovers the mouse over them*/ 
+{
+    background-color: rgb(0, 253, 76);
+    border-color: black;
+    border-radius: 25px;
+    cursor:context-menu;
+    padding: 16px 32px;
+    transition-duration: 0.4s;
+}
+
+/* this telles the div players to adjust accordingly to center align justify on line while maintaining a 50px gap between player titles */
+.players 
+{
+    display: flex;
+    justify-content: center; /* centers both players */
+    gap: 50px; /* space between Player 1 and Player 2 */
+    color: whitesmoke;
+}
+
+/* this stacks the player titles centered on top of their respective image */
+.player 
+{
+    display: flex;
+    flex-direction: column; /* stack title above image */
+    align-items: center; /* center title and image */
+}
+
+/* this places the results centered on page and changes font color*/
+#results
+{
+    text-align: center;
+    color: whitesmoke;
+}
+
+/* formats my mainContainer as a whole */
+#mainContainer
+{
+    display: flex;/* puts items side-by-side */
+    align-items: flex-start;/* aligns top edges */
+    gap: 40px;/* space between buttons and list */
+}
+
+/* formats my gamecontainer within the mainContainer */
+#gameContainer
+{
+    flex: 1; /*calculates center of space left to the right of the buttonContainerLeft and centers the gameContainer content*/
+    text-align: center;
+}
+
+/* this formats the container around the nav buttons */
+#buttonContainerLeft
+{
+    display: flex; /*allows button size to change*/
+    flex-direction: column; /*stacks buttons vertically*/
+    align-items: flex-start; /*stacks buttons on the left side of the page*/
+    justify-content: flex-start; /**/
+    flex-wrap: wrap; /*keepts the buttons from overflowing*/
+    gap: 10px; /*space around buttons to container*/
+    
+    /* this adds a "floating dock" styled border around the buttons */
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px); /*addes a glass effect bluring the contents under the border*/
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 20px;
+    width: fit-content;
+    margin: 20px; /* spacing from edge */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* #buttonContainer button is a descendant selector applying formatting to all <button> inside buttonContainer  */
+#buttonContainerLeft button
+{
+    display: block;
+    width: 180px; /*this makes all buttons the same width regardless of text inside*/ 
+    background-color: grey; /*dictates button background color*/
+    color: whitesmoke; /*font color inside button*/
+    border: 2px solid black; /*adds solid black border 2 pixels wide */
+    border-radius: 10px; /*gives the button rounded corners*/
+    margin: 0;
+    padding: 10px 20px; /*space around border*/
+    transition: 0.3s; /* smooth hover effect */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);  /*size and color of shadow effect*/
+}
+
+/* this changes the background color of the bottons when user mouses over them */
+#buttonContainerLeft button:hover
+{
+    background-color: rgb(60, 97, 104);
+    transform: scale(1.05); /* slight 5% grow */
+}
+
+/* this formats the uat shield logo and keeps it in the bottom left hand corner of the window */
+#uatLogo
+{
+    position: fixed;/* locks it to the window */
+    bottom: 20px;/* distance from bottom */
+    left: 20px;/* distance from left */
+    width: 120px;/* adjust size */
+    height: auto;/* keeps height proportional */
+    opacity: 0.9;/* reduced opacity for a slightly more subtle look */
+}

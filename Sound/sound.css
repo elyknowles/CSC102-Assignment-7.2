@@ -1,0 +1,81 @@
+/* Ely Knowles, CSC 102, Assignment 7.2, 28APR2026 */
+
+/* this controls color of webpage, aligns font, changes font color */
+body
+{
+    background-color: rgb(1, 132, 255);
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* controls font of header */
+h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* this formats the border around my nav buttons */
+#buttonContainerLeft
+{
+    display: flex; /*allows button size to change*/
+    flex-direction: column; /*stacks buttons vertically*/
+    align-items: flex-start; /*stacks buttons on the left side of the page*/
+    justify-content: flex-start; /**/
+    flex-wrap: wrap; /*keepts the buttons from overflowing*/
+    gap: 10px; /*space around buttons to container*/
+    
+    /* this adds a "floating dock" styled border around the buttons */
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px); /*this adds a glass effect bluring what is behind the border*/
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 20px;
+    width: fit-content;
+    margin: 20px; /* spacing from edge */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* #buttonContainer button is a descendant selector applying formatting to all <button> inside buttonContainer  */
+#buttonContainerLeft button
+{
+    display: block;
+    width: 180px; /*this makes all buttons the same width regardless of text inside*/ 
+    background-color: grey; /*dictates button background color*/
+    color: whitesmoke; /*font color inside button*/
+    border: 2px solid black; /*adds solid black border 2 pixels wide */
+    border-radius: 10px; /*gives the button rounded corners*/
+    margin: 0;
+    padding: 10px 20px; /*space around border*/
+    transition: 0.3s; /* smooth hover effect */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);  /*size and color of shadow effect*/
+}
+
+/* this changes the background color of the bottons when user mouses over them */
+#buttonContainerLeft button:hover
+{
+    background-color: rgb(60, 97, 104);
+    transform: scale(1.05); /* slight 5% grow */
+}
+
+/* this formats the background image and moves it behind all other content */
+#image
+{
+    position: fixed;/* sticks to screen */
+    top: 0; /* starting top fixed position in px */
+    left: 0; /* starting left position in px */
+    width: 100%; /*essentially tells image that body is 100% width of window */
+    height: 100%; /* essentially tells image that body is 100% height of window */
+    object-fit: cover; /* fills screen with image */
+    z-index: -1; /* puts it behind everything */
+}
+
+/* this formats the uat shield logo and keeps it in the bottom left hand corner of the window */
+#uatLogo
+{
+    position: fixed;/* locks it to the window */
+    bottom: 20px;/* distance from bottom */
+    left: 20px;/* distance from left */
+    width: 120px;/* adjust size */
+    height: auto;/* keeps height proportional */
+    opacity: 0.9;/* reduced opacity for a slightly more subtle look */
+}
