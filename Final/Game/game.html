@@ -1,0 +1,69 @@
+<!-- Ely Knowles, CSC102, Assignment 7.2, 28APR2026 -->
+<!-- Typing ! allows intelisense to prepopulate the html doctype template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title is what the user will see displayed on the browser tab -->
+    <title>JavaScript Function Demo</title>
+    <!-- link ties the html file to the css file so the webpage looks good -->
+    <link rel="stylesheet" href="game.css">
+</head>
+<!-- body is the webapge the user sees -->
+<body>
+    <header>
+        <!-- h1 is the largest header and the heading id allows the js to change it -->
+        <h1 id="heading">Play a Game</h1>
+    </header>
+    <!-- these two breaks moves the game title down the page -->
+    <br>
+    <br>
+    <!-- mainContainer bucket for flex formatting in css -->
+    <div id="mainContainer"> 
+        <!-- buttonContainerLeft for ease of formatting across all pages -->
+        <div id="buttonContainerLeft">
+            <button id="home" onclick="homePage()">Home</button>
+            <button id="boards" onclick="boardsPage()">Boards</button>
+            <button id="meme" onclick="memePage()">Meme</button>
+            <button id="pal" onclick="palPage()">Palindrome</button>
+            <button id="shop" onclick="shopPage()">Shopping List</button>
+            <button id="sound" onclick="soundPage()">Space Station</button>
+            <button id="table" onclick="tablePage()">Table</button>
+        </div>
+        <!-- gameContainer to simplify css and allow for buttons to stay on left side of page -->
+        <div id="gameContainer">
+            <!-- h2 provides the title for the game -->
+            <h2>Rock Paper Scissors</h2>
+            <!-- this provides a title image -->
+            <img id = "rps" src= "rps.jpg">
+            <!-- this moves the bottom to underneath the title image -->
+            <br>
+            <!-- this button causes js to run and generate the random results for each player as well as asigns a button id to call in specific button in css -->
+            <button id="rpsBtn" onclick ="RPS()"> Play Rock Paper Scissors</button>
+            <!-- this moves player 1 placement down to next line -->
+            <br>
+            <!-- div creates a container which will be displayed on the same line. This puts the players side by side -->
+            <div class="players">
+                <div class="player">
+                <h3>Player 1</h3>
+                <img id="player1Image" width="200px" height="200px"/>
+                </div>
+                <div class="player">
+                <h3>Player 2</h3>
+                <img id="player2Image" width="200px" height="200px"/>
+                </div>
+            </div>
+            <!-- this moves the results of the game underneath both players -->
+            <br>
+            <!-- this tells the user who won -->
+            <div id="results"></div>
+        </div>
+    </div>
+    <!-- script links to the javascript file -->
+    <script src="game.js"></script>
+    <!-- this adds the UAT shield logo to my boards page -->
+    <img id="uatLogo"  src="../Home Page Images/UAT_shield.png">
+    
+</body>
+</html>
